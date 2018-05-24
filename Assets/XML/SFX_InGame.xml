@@ -1,0 +1,13 @@
+<SFX_SETUP>
+	<SFX name="Button" volume="1" />
+	<SFX name="Selection" volume="1" /> 
+	<SFX name="LetsGo" volume="1" />
+	<SFX name="Tick" volume="1" />  
+	<SFX name="Victoire" volume="1" /> 
+	<SFX name="GameOver" volume="1" /> 
+    <SFX name="Lancer" volume="1" /> 
+    <SFX name="Paf" volume="1" /> 
+    <SFX name="Explosion" volume="1" /> 
+    <SFX name="Pull" volume="1" /> 
+
+</SFX_SETUP>
