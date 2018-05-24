@@ -5,8 +5,11 @@ using SDD.Events;
 
 using Random = UnityEngine.Random;
 
-public class Beam : MonoBehaviour, IScore
+public class Beam : MonoBehaviour, IEventHandler, IScore
 {
+    Rigidbody m_Rigidbody;
+    Transform m_Transform;
+
 	[Header("Destruction")]
 	[SerializeField]
 	float m_DestructionForce;
@@ -22,12 +25,20 @@ public class Beam : MonoBehaviour, IScore
 
 	bool m_AlreadyHit = false;
 
+    void Awake()
+    {
+        m_Rigidbody = GetComponent<Rigidbody>();
+        m_Transform = GetComponent<Transform>();
+        SubscribeEvents();
+    }
+
 	private void OnDestroy()
 	{
 		if (GameManager.Instance.IsPlaying)
 		{
 			EventManager.Instance.Raise(new ScoreItemEvent() { eScore = this as IScore });
 		}
+        UnsubscribeEvents();
 	}
 
 	private void OnCollisionEnter(Collision collision)
@@ -48,4 +59,23 @@ public class Beam : MonoBehaviour, IScore
 			}
 		}
 	}
+
+    void ExplosiveHasBeenDestroyed(ExplosiveHasBeenDestroyedEvent e)
+    {
+        float distance = Vector3.Distance(e.eCenter, m_Transform.position);
+        if (distance <= e.eRadius)
+        {
+            m_Rigidbody.AddForce((m_Transform.position - e.eCenter).normalized * Mathf.Lerp(e.ePower, 0, distance / e.eRadius), ForceMode.Impulse);
+        }
+    }
+
+    public void SubscribeEvents()
+    {
+        EventManager.Instance.AddListener<ExplosiveHasBeenDestroyedEvent>(ExplosiveHasBeenDestroyed);
+    }
+
+    public void UnsubscribeEvents()
+    {
+        EventManager.Instance.RemoveListener<ExplosiveHasBeenDestroyedEvent>(ExplosiveHasBeenDestroyed);
+    }
 }

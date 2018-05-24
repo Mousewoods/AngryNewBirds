@@ -49,6 +49,14 @@ public class NextLevelButtonClickedEvent : SDD.Events.Event
 }
 #endregion
 
+#region Explosive Event
+public class ExplosiveHasBeenDestroyedEvent : SDD.Events.Event{
+    public Vector3 eCenter;
+    public float eRadius;
+    public float ePower;
+}
+#endregion
+
 #region Enemy Event
 public class EnemyHasBeenDestroyedEvent : SDD.Events.Event
 {

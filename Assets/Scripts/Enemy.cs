@@ -6,7 +6,7 @@ using SDD.Events;
 
 using Random = UnityEngine.Random;
 
-public class Enemy : MonoBehaviour,IScore {
+public class Enemy : MonoBehaviour,IEventHandler, IScore {
 
 	Rigidbody m_Rigidbody;
 	Transform m_Transform;
@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour,IScore {
 	{
 		m_Rigidbody = GetComponent<Rigidbody>();
 		m_Transform = GetComponent<Transform>();
+        SubscribeEvents();
 	}
 
 	protected void Start()
@@ -43,6 +44,7 @@ public class Enemy : MonoBehaviour,IScore {
 			EventManager.Instance.Raise(new ScoreItemEvent() { eScore = this as IScore });
 			EventManager.Instance.Raise(new EnemyHasBeenDestroyedEvent() { eEnemy = this });
 		}
+        UnsubscribeEvents();
 	}
     private void OnTriggerEnter(Collider coll)
     {
@@ -101,4 +103,21 @@ public class Enemy : MonoBehaviour,IScore {
 		}
 		*/
 	}
+
+    void ExplosiveHasBeenDestroyed(ExplosiveHasBeenDestroyedEvent e){
+        if(Vector3.Distance(e.eCenter, m_Transform.position) <= e.eRadius){
+            m_AlreadyHit = true;
+            Destroy(gameObject);
+        }
+    }
+
+    public void SubscribeEvents()
+    {
+        EventManager.Instance.AddListener<ExplosiveHasBeenDestroyedEvent>(ExplosiveHasBeenDestroyed);
+    }
+
+    public void UnsubscribeEvents()
+    {
+        EventManager.Instance.RemoveListener<ExplosiveHasBeenDestroyedEvent>(ExplosiveHasBeenDestroyed);
+    }
 }
