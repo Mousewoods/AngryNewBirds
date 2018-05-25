@@ -3771,11 +3771,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114507241717937650, guid: 8b33d8ab63d65bb459abda56b327ecf0,
-        type: 2}
-      propertyPath: m_BallSpawnPoint
-      value: 
-      objectReference: {fileID: 479302978}
     - target: {fileID: 114701900165111318, guid: 8b33d8ab63d65bb459abda56b327ecf0,
         type: 2}
       propertyPath: m_TxtBestScore
@@ -3796,6 +3791,11 @@ Prefab:
       propertyPath: m_TxtNEnemiesLeftBeforeVictory
       value: 
       objectReference: {fileID: 1896576383}
+    - target: {fileID: 114507241717937650, guid: 8b33d8ab63d65bb459abda56b327ecf0,
+        type: 2}
+      propertyPath: m_BallSpawnPoint
+      value: 
+      objectReference: {fileID: 479302978}
     - target: {fileID: 114552253021211980, guid: 8b33d8ab63d65bb459abda56b327ecf0,
         type: 2}
       propertyPath: m_PanelMainMenu
@@ -3821,6 +3821,16 @@ Prefab:
       propertyPath: m_PanelGameOver
       value: 
       objectReference: {fileID: 1826462211}
+    - target: {fileID: 114387382519134664, guid: 8b33d8ab63d65bb459abda56b327ecf0,
+        type: 2}
+      propertyPath: m_Clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3861f1f3ec9664706a77247255929d0f, type: 3}
+    - target: {fileID: 114387382519134664, guid: 8b33d8ab63d65bb459abda56b327ecf0,
+        type: 2}
+      propertyPath: m_Clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: e1e1f0e6565b86a49adb64d0fd435684, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b33d8ab63d65bb459abda56b327ecf0, type: 2}
   m_IsPrefabParent: 0
@@ -4512,7 +4522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2098367688
 MonoBehaviour:
   m_ObjectHideFlags: 0
