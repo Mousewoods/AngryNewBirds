@@ -43,7 +43,7 @@ public class Beam : MonoBehaviour, IEventHandler, IScore
 
 	private void OnCollisionEnter(Collision collision)
 	{
-        SfxManager.Instance.PlaySfx(Constants.EXPLOSION_SFX);
+        SfxManager.Instance.PlaySfx(Constants.PAF_SFX);
 
 		if (GameManager.Instance.IsPlaying
 			&& !m_AlreadyHit

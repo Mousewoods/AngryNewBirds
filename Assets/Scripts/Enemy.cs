@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour,IEventHandler, IScore {
 	}
     private void OnTriggerEnter(Collider coll)
     {
-        SfxManager.Instance.PlaySfx(Constants.PAF_SFX);
+        SfxManager.Instance.PlaySfx(Constants.EXPLOSION_SFX);
 
         if (Time.time > m_TimeStartCheckCollision
             && GameManager.Instance.IsPlaying
