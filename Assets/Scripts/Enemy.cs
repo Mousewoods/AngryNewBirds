@@ -120,4 +120,6 @@ public class Enemy : MonoBehaviour,IEventHandler, IScore {
     {
         EventManager.Instance.RemoveListener<ExplosiveHasBeenDestroyedEvent>(ExplosiveHasBeenDestroyed);
     }
+
+    public void Error(){} //Nico
 }
