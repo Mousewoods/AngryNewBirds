@@ -114,7 +114,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1041039347957568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34, y: 2.7, z: 0}
+  m_LocalPosition: {x: -32.8, y: 2.7, z: -4.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4525910714085320}
@@ -128,13 +128,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1609865377669842}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4302730870919434}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4586971351011406
 Transform:
   m_ObjectHideFlags: 1
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_MinArrowExtension: 1
   m_MaxArrowExtension: 4
   m_MeshRenderer: {fileID: 23073133616876460}
-  m_UnlockedMaterial: {fileID: 2100000, guid: 1979201b90bf613469c334a431ef2521, type: 2}
+  m_UnlockedMaterial: {fileID: 2100000, guid: a00072b0307b541d5813c1d9a80de772, type: 2}
   m_LockedMaterial: {fileID: 2100000, guid: a00072b0307b541d5813c1d9a80de772, type: 2}
   m_LifeDurationWhenFlying: 10
   m_LifeDurationWhenHit: 10

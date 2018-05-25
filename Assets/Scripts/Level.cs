@@ -20,6 +20,8 @@ public class Level : MonoBehaviour,IEventHandler {
 	public float MinImpulsionForce { get { return m_MinImpulsionForce; } }
 	[SerializeField] float m_MaxImpulsionForce;
 	public float MaxImpulsionForce { get { return m_MaxImpulsionForce; } }
+	[Header("EnemyMaterial")]
+	[SerializeField]Material m_EnemyMaterial;
 
 	List<Enemy> m_Enemies = new List<Enemy>();
 
@@ -62,6 +64,9 @@ public class Level : MonoBehaviour,IEventHandler {
 	{
 		//enemies
 		m_Enemies = GetComponentsInChildren<Enemy>().ToList();
+		foreach (var item in m_Enemies) {
+			item.GetComponent<MeshRenderer> ().material = m_EnemyMaterial;
+		}
 		
 		//moving items
 		m_MovingItems = GetComponentsInChildren<LevelMovingItem>().ToList();
