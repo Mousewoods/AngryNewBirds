@@ -75,6 +75,8 @@ public class Enemy : MonoBehaviour,IEventHandler, IScore {
                 Destroy(gameObject);
             }
         }
+
+
 	/*private void OnCollisionEnter(Collision collision)
 	{
 		if(Time.time> m_TimeStartCheckCollision
@@ -123,3 +125,6 @@ public class Enemy : MonoBehaviour,IEventHandler, IScore {
 
     public void Error(){} //Nico
 }
+
+
+//Loïc test conflits
