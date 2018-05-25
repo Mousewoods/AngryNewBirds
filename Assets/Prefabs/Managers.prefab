@@ -503,12 +503,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DoNotDestroyGameObjectOnLoad: 0
   m_LevelsPrefabs:
-  - {fileID: 1270220456667928, guid: 01ab0666aa74cc842b134a7adf1e7876, type: 2}
-  - {fileID: 1035296692258002, guid: d212f67537710fb409a480f67655e54d, type: 2}
-  - {fileID: 1529043156413182, guid: fdc601f31b37142b0b7bccd0e131cd70, type: 2}
-  - {fileID: 1373829821319508, guid: 79c78c928094d7e49a881e5ce1398078, type: 2}
-  - {fileID: 1905390939646792, guid: 9ba8d020098fa4cfdae203b905d8dd4a, type: 2}
   - {fileID: 1828951895004286, guid: 5180e702209804242b8f0a60bf500a34, type: 2}
+  - {fileID: 1035296692258002, guid: d212f67537710fb409a480f67655e54d, type: 2}
+  - {fileID: 1905390939646792, guid: 9ba8d020098fa4cfdae203b905d8dd4a, type: 2}
 --- !u!114 &114552253021211980
 MonoBehaviour:
   m_ObjectHideFlags: 1
