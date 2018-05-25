@@ -75,6 +75,8 @@ public class Enemy : MonoBehaviour,IEventHandler, IScore {
                 Destroy(gameObject);
             }
         }
+
+
 	/*private void OnCollisionEnter(Collision collision)
 	{
 		if(Time.time> m_TimeStartCheckCollision
@@ -121,3 +123,6 @@ public class Enemy : MonoBehaviour,IEventHandler, IScore {
         EventManager.Instance.RemoveListener<ExplosiveHasBeenDestroyedEvent>(ExplosiveHasBeenDestroyed);
     }
 }
+
+
+//Loïc test conflits
